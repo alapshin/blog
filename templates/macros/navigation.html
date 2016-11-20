@@ -1,0 +1,11 @@
+{% macro render_navigation(page) %}
+<nav class="navbar navbar-fixed-top navbar-light bg-faded">
+    <ul class="nav navbar-nav">
+        {% for item in bag('menu.menu') %}
+            <li{% if page.is_child_of(item.path) %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+                <a class="nav-link" href="{{ item.path|url }}">{{ item.label }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
+{% endmacro %}

@@ -1,0 +1,16 @@
+{
+    "menu": [
+        {
+            "path": "/blog",
+            "label": "Blog"
+        },
+        {
+            "path": "/about",
+            "label": "About"
+        },
+        {
+            "path": "/contacts",
+            "label": "Contacts"
+        }
+    ]
+}
