@@ -1,3 +1,13 @@
 body {
-  padding-top: 5rem;
+    min-height: 100vh;
+}
+
+.content {
+}
+
+.header {
+}
+
+.footer {
+    margin: 50px;
 }

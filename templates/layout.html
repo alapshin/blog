@@ -8,20 +8,22 @@
         <link rel="stylesheet" href="{{ '/static/gen/styles.css'|asseturl }}">
     </head>
     <title>{% block title %}{% endblock %}</title>
-    <body>
-        {{ render_navigation(this) }}
-        <div class="container">
+    <body class="d-flex flex-column">
+        <header class="header">
+            {{ render_navigation(this) }}
+        </header>
+        <div class="content container">
             {% block body %}{% endblock %}
         </div>
-        <footer class="text-xs-center">
-            <nav class="navbar navbar-fixed-bottom navbar-light bg-faded">
+        <footer class="footer mt-auto">
+            <div class="container text-center">
                 &copy Andrei Lapshin
                 <script type="text/javascript">
                     document.write(new Date().getFullYear());
                 </script>
-                <br>
+                <br/>
                 All content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-            </nav>
+            </div>
         </footer>
         <script type=text/javascript src="{{ '/static/gen/app.js'|asseturl }}" charset="utf-8"></script>
     </body>
