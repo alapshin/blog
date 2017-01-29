@@ -4,44 +4,42 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var options = {
     entry: {
-        'app': './js/main.js',
-        'styles': './scss/main.scss'
+        app: './js/main.js',
+        styles: './scss/main.scss'
     },
     output: {
-        path: path.dirname(__dirname) + '/assets/static/gen',
+        path: path.resolve(path.dirname(__dirname), 'assets/static/gen'),
         filename: '[name].js',
         publicPath: '/static/gen/',
     },
     devtool: '#cheap-module-source-map',
     resolve: {
-        extensions: ['', '.js'],
-        modulesDirectories: ['node_modules']
+        modules: ['node_modules'],
+        extensions: ['.js']
     },
     module: {
-        loaders: [
+        rules: [
         {
             test: /\.js$/,
             exclude: /node_modules/,
-            loader: 'babel-loader'
+            use: 'babel-loader'
         },
         {
             test: /\.(png|jpg|jpeg|gif)$/, 
-            loader: 'url?limit=10000&name=images/[name].[ext]'
+            use: 'url?limit=10000&name=images/[name].[ext]'
         },
         {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+            use: ExtractTextPlugin.extract({loader: 'css-loader!sass-loader', fallbackLoader: 'style-loader'})
         },
         {
             test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-            loader: 'file-loader'
+            use: 'file-loader'
         }
         ]
     },
     plugins: [
-        new ExtractTextPlugin('styles.css', {
-            allChunks: true
-        }),
+        new ExtractTextPlugin({ filename: 'styles.css', allChunks: true }),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin()
     ]
