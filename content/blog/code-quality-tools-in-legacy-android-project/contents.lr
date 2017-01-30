@@ -61,7 +61,7 @@ patterns like
 To generate this list you can run following command from the root directory of
 your project
 
-```
+```bash
 find . -name '*.java'  -printf "**/%f\n" > checkstyle-exclude-list.txt
 ```
 
@@ -78,7 +78,7 @@ Same principle applies to *FindBugs*. We create two separate Gradle tasks
 The only interesting difference (apart from different configuration options)
 from *checkstyle* task is section
 
-```
+```groovy
 doFirst {
         String[] excludedFiles = rootProject.file('checkstyle-exclude-list.txt')
         FileTree ft = fileTree("${project.projectDir}/build/intermediates/classes")
@@ -98,7 +98,7 @@ for inner classes from ignored java source files
 To use this tasks in your project you could save them in *gradle* subdirectory
 as *checkstyle.gradle* and *findbugs.gradle*. Then add lines
 
-```
+```groovy
 apply from: rootProject.file('gradle/findbugs.gradle')
 apply from: rootProject.file('gradle/checkstyle.gradle')
 ```
@@ -114,7 +114,7 @@ Starting from version 2.3.0 of *android-gradle-plugin* *lint* adds [baseline][4]
 feature. To start using it you first have to tell lint where to store all
 current warnings/errors
 
-```
+```groovy
 android {
     lintOptions {
         baseline file("lint-baseline.xml") // your choice of filename/path here
@@ -124,7 +124,7 @@ android {
 
 and run lint
 
-```
+```bash
 ./gradlew lintDebug
 ```
 
@@ -136,7 +136,7 @@ and run lint
 After that *lint* will only detect new issues and ignore issues from baseline
 so you can allow lint to fail the build if there is any issues detected
 
-```
+```groovy
 android {
     lintOptions {
         abortOnError true
@@ -147,7 +147,7 @@ android {
 
 Also in documentation on tools' site there are lines
 
-```
+```groovy
 android {
     lintOptions {
         checkAllWarnings true
@@ -165,9 +165,9 @@ as errors. In combination with *abortOnError true* this can lead to false
 positives and frequently broken build. Instead I recommend to look through [list
 of lint checks][5] decide which warnings should be treated as errors and raise
 their severity in lint xml config. For example to treat hardcoded text as error
-add to *lint.xml*
+add to `lint.xml`
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
     <issue id="HardcodedText" severity="error"/>
