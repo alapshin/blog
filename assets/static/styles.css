@@ -2,12 +2,13 @@ body {
     min-height: 100vh;
 }
 
-.content {
-}
-
 .header {
 }
 
 .footer {
     margin: 50px;
+}
+
+.flex-fill {
+    flex: 1 0 auto;
 }

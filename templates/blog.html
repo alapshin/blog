@@ -1,10 +1,16 @@
 {% extends "layout.html" %}
-{% from "macros/blog.html" import render_blog_post %}
+{% from "macros/blog.html" import render_blog_title %}
 {% from "macros/pagination.html" import render_pagination %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-    {% for child in this.pagination.items %}
-        {{ render_blog_post(child, from_index=true) }}
-    {% endfor %}
-    {{ render_pagination(this.pagination) }}
+    <div class="d-flex flex-column flex-fill">
+        <div class="flex-fill">
+            {% for child in this.pagination.items %}
+                {{ render_blog_title(child) }}
+            {% endfor %}
+        </div>
+        <div>
+            {{ render_pagination(this.pagination) }}
+        </div>
+    </div>
 {% endblock %}
