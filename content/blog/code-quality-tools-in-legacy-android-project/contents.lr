@@ -23,7 +23,7 @@ that. What I want to talk about is how to use these tools in a legacy
 project that contains hundreds of Java source files and dozens of layout
 resources.
 
-### Why
+##### Why
 When setting up aforementioned tools we usually want two things
 
 * Detect as much defects as possible
@@ -43,7 +43,7 @@ code is less than rate of adding new features you could never catch up at all.
 What we want instead is to ignore legacy code but detect as much issues as
 possible in the new code.
 
-### Checkstyle
+##### Checkstyle
 To achieve this with *Checkstyle* we create two separate Gradle tasks
 
 <script src="https://gist.github.com/alapshin/2294b7d2ad7bb0869c1319003ae33d94.js"></script>
@@ -70,7 +70,7 @@ files added after this moment would be analyzed. Of course you can use custom lo
 generate list of patterns or even generate this list every time before running
 *checkstyle* task.
 
-### Findbugs
+##### Findbugs
 Same principle applies to *FindBugs*. We create two separate Gradle tasks
 
 <script src="https://gist.github.com/alapshin/143c44b22f11e63969a5936f8ad275e6.js"></script>
@@ -90,11 +90,11 @@ doFirst {
 ```
 
 Since *FindBugs* operates on class files we have to
-1) replace *.java* filename extension with *.class*
-2) add glob symbol `*` to the end of filename to exclude class files generated
+1. Replace *.java* filename extension with *.class*
+2. Add glob symbol `*` to the end of filename to exclude class files generated
 for inner classes from ignored java source files
 
-### How to use these tasks
+##### How to use these tasks
 To use this tasks in your project you could save them in *gradle* subdirectory
 as *checkstyle.gradle* and *findbugs.gradle*. Then add lines
 
@@ -109,7 +109,7 @@ to top of module-level *build.gradle* and lines to the end of root-level *build.
 
 This way this tasks will be run every time standard *check* task is run.
 
-### Android Lint
+##### Android Lint
 Starting from version 2.3.0 of *android-gradle-plugin* *lint* adds [baseline][4]
 feature. To start using it you first have to tell lint where to store all
 current warnings/errors
@@ -174,7 +174,7 @@ add to `lint.xml`
 </lint>
 ```
 
-### Conclusion
+##### Conclusion
 *Checkstyle*, *FindBugs* and *Lint* are great tools to have in your arsenal
 and now you can start using them in old projects without paying upfront cost
 and hopefully someday you could remove tricks mentioned in this article from
