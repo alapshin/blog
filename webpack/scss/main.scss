@@ -2,3 +2,22 @@
 @import 'lux/bootswatch';
 @import '~bootstrap/scss/bootstrap';
 @import '~font-awesome/css/font-awesome.css';
+
+footer {
+    a {
+        color: $blue;
+        @include hover {
+            color: darken($blue, 15%);
+        }
+    }
+}
+
+article {
+    a {
+        color: $blue;
+        @include hover {
+            color: darken($blue, 15%);
+        }
+    }
+}
+

@@ -2,15 +2,12 @@
 // Bootswatch
 
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans" !default;
-@import url($web-font-path);
-
 // Navbar ======================================================================
 
 .navbar {
   font-size: $font-size-sm;
-  text-transform: uppercase;
   font-weight: 600;
+  text-transform: uppercase;
 
   &-nav {
     .nav-link {
@@ -49,8 +46,8 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans" !default;
 
 .btn {
   font-size: $font-size-sm;
-  text-transform: uppercase;
   font-weight: 600;
+  text-transform: uppercase;
 
   &-sm {
     font-size: 10px;
@@ -78,8 +75,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 // Tables ======================================================================
