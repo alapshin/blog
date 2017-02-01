@@ -16,6 +16,8 @@
 {% endmacro %}
 
 {% macro render_blog_title(post) %}
-<h3><a href="{{ post|url }}">{{ post.title }}</a></h3>
-{{ post.body.source | truncate }}
+<section class="mb-5">
+    <h3><a href="{{ post|url }}">{{ post.title }}</a></h3>
+    {{ post.body.source | truncate }}
+</section>
 {% endmacro %}

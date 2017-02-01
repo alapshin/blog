@@ -21,3 +21,6 @@ article {
     }
 }
 
+blockquote {
+    @extend .blockquote;
+}
