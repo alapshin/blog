@@ -3,6 +3,12 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~font-awesome/css/font-awesome.css';
 
+.fa {
+    margin: 0.5rem;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
 footer {
     a {
         color: $blue;

@@ -7,10 +7,6 @@
         {
             "path": "/about",
             "label": "About"
-        },
-        {
-            "path": "/contacts",
-            "label": "Contacts"
         }
     ]
 }
