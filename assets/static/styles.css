@@ -5,10 +5,6 @@ body {
 .header {
 }
 
-.footer {
-    margin: 50px;
-}
-
 .flex-fill {
     flex: 1 0 auto;
 }
