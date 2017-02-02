@@ -1,5 +1,5 @@
 {% macro render_navigation(page) %}
-<nav class="navbar navbar-toggleable">
+<nav class="navbar navbar-toggleable justify-content-center">
     <ul class="nav navbar-nav">
         {% for item in bag('menu.menu') %}
             <li{% if page.is_child_of(item.path) %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
