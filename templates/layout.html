@@ -4,12 +4,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        {% block redirect %}{% endblock %}
-        <link rel="stylesheet" href="{{ '/static/styles.css'|url }}">
+        <link rel="stylesheet" href="{{ '/static/styles.css'|asseturl }}">
         <link rel="stylesheet" href="{{ '/static/gen/styles.css'|asseturl }}">
         <link rel="stylesheet" href="{{ get_pygments_stylesheet()|url }}">
+
+        {% block redirect %}{% endblock %}
+        <title>{% block title %}{% endblock %}</title>
     </head>
-    <title>{% block title %}{% endblock %}</title>
     <body class="d-flex flex-column">
         <header class="header">
             {{ render_navigation(this) }}
