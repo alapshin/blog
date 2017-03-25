@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% from "macros.html" import render_article_header %}
+
+{% block head %}
+    {{ super() }}
+    {% for tag in article.tags %}
+        <meta name="tags" content="{{tag}}"/>
+    {% endfor %}
+{% endblock head %}
+{% block title %}{{ article.title }}{% endblock title %}
+
+{% block content %}
+    <article>
+        {{ render_article_header(article) }}
+        {{ article.content }}
+    </article>
+{% endblock content %}

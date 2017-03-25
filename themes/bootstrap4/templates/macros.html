@@ -1,0 +1,23 @@
+{% macro render_article_tags(article) %}
+<span class="fa fa-tags"></span>
+{% for tag in article.tags %}
+    <a href="{{ tag.url }}">{{ tag.name }}</a>
+{% endfor %}
+{% endmacro %}
+
+{% macro render_article_header(article) %}
+<header>
+    <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+    <p>
+        <span class="fa fa-calendar"></span><time datetime="{{ article.date.isoformat() }}" class="mr-3">{{ article.locale_date }}</time>
+        {{ render_article_tags(article) }}
+    </p>
+</header>
+{% endmacro %}
+
+{% macro render_article_summary(article) %}
+<article>
+    {{ render_article_header(article) }}
+    {{ article.summary }}
+</article>
+{% endmacro %}

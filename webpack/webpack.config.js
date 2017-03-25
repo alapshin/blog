@@ -8,9 +8,8 @@ var options = {
         styles: './scss/main.scss'
     },
     output: {
-        path: path.resolve(path.dirname(__dirname), 'assets/static/gen'),
+        path: path.resolve(path.dirname(__dirname), 'themes/bootstrap4/static/gen'),
         filename: '[name].js',
-        publicPath: '/static/gen/',
     },
     devtool: '#cheap-module-source-map',
     resolve: {

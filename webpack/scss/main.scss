@@ -1,30 +1,14 @@
-@import 'lux/variables';
-@import 'lux/bootswatch';
+@import 'sand/variables';
+
 @import '~bootstrap/scss/bootstrap';
 @import '~font-awesome/css/font-awesome.css';
 
+@import 'sand/bootswatch';
+
+
 .fa {
-    margin: 0.5rem;
-    font-size: 2rem;
+    margin-right: $spacer * 0.25;
     vertical-align: middle;
-}
-
-footer {
-    a {
-        color: $blue;
-        @include hover {
-            color: darken($blue, 15%);
-        }
-    }
-}
-
-article {
-    a {
-        color: $blue;
-        @include hover {
-            color: darken($blue, 15%);
-        }
-    }
 }
 
 blockquote {

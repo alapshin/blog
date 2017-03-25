@@ -1,7 +1,0 @@
-[project]
-name = blog
-
-[packages]
-lektor-webpack-support = 0.3
-lektor-markdown-highlighter = 0.1
-lektor-markdown-excerpt = 0.1

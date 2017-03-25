@@ -1,0 +1,10 @@
+<nav class="navbar navbar-toggleable navbar-inverse bg-primary mb-5 justify-content-end">
+    <h1 class="navbar-brand mr-auto mb-0">{{ SITENAME }}</h1>
+    <ul class="nav navbar-nav">
+        {% for title, link in LINKS %}
+            <li class="nav-item{% if False %} active{% endif %}">
+                <a class="nav-link" href="{{ link }}">{{ title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% from "macros.html" import render_article_summary %}
+
+{% block content %}
+    <div class="d-flex flex-column flex-fill">
+        <div class="flex-fill">
+            {% for article in articles_page.object_list %}
+                {{ render_article_summary(article) }}
+            {% endfor %}
+        </div>
+        {% if articles_page.has_other_pages() %}
+            {% include 'pagination.html' %}
+        {% endif %}
+    </div>
+{% endblock content %}
