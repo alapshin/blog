@@ -12,8 +12,8 @@ USE_FOLDER_AS_CATEGORY = False
 
 # URL settings
 # Uncomment following line if you want document-relative URLs when developing
-ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
+ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 PAGE_URL = 'pages/{slug}/'
 PAGE_SAVE_AS = 'pages/{slug}/index.html'
 ARCHIVES_URL = 'archives/'
