@@ -204,8 +204,6 @@ Last but not least I want to give big thanks to Mark Allison of `Styling Android
 fame for writing about custom fonts support before IO17. You could check his
 articles([part 1][5], [part 2][6]) for more details.
 
-Demo application for this post is available on [Github][7]
-
 
 [1]: https://github.com/chrisjenx/Calligraphy
 [2]: https://github.com/lisawray/fontbinding
