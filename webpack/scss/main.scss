@@ -14,3 +14,7 @@
 blockquote {
     @extend .blockquote;
 }
+
+article > table {
+    @extend .table, .table-sm;
+}
