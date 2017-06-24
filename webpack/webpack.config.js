@@ -29,7 +29,10 @@ var options = {
         },
         {
             test: /\.scss$/,
-            use: ExtractTextPlugin.extract({loader: 'css-loader!sass-loader', fallbackLoader: 'style-loader'})
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: ['css-loader', 'sass-loader'] 
+            })
         },
         {
             test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
