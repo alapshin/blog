@@ -11,14 +11,19 @@
     vertical-align: middle;
 }
 
-blockquote {
-    @extend .blockquote;
-}
-
+// Justify text in article
 article {
-    @extend .text-justify
-}
-
-article > table {
-    @extend .table, .table-sm;
+    @extend .text-justify;
+    // But don't justify text in article's headers
+    header {
+        @extend .text-left;
+    }
+    // Use correct Bootstrap styling for tables
+    table {
+        @extend .table, .table-sm;
+    }
+    // Use correct Bootstrap styling for blockquotes
+    blockquote {
+        @extend .blockquote;
+    }
 }
