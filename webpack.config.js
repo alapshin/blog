@@ -4,8 +4,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var options = {
     entry: {
-        app: './js/main.js',
-        styles: './scss/main.scss'
+        app: './assets/js/main.js',
+        styles: './assets/scss/main.scss'
     },
     output: {
         path: path.resolve(path.dirname(__dirname), 'themes/bootstrap4/static/gen'),
