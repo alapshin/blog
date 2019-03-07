@@ -1,6 +1,2 @@
-*.pid
 output/
-venv/
 __pycache__/
-node_modules/
-themes/bootstrap4/static/gen/

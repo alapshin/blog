@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import render_article_header %}
+{% from "macros.html" import render_article_header, render_article_footer %}
 
 {% block head %}
     {{ super() }}
@@ -13,5 +13,6 @@
     <article>
         {{ render_article_header(article) }}
         {{ article.content }}
+        {{ render_article_footer(article) }}
     </article>
 {% endblock content %}

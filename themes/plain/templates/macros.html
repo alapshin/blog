@@ -1,0 +1,42 @@
+{% macro render_article_tags(article) %}
+<span>
+Tags:
+{% for tag in article.tags %}
+    <a href="{{ tag.url }}">{{ tag.name }}</a>{{ "," if not loop.last }}
+{% endfor %}
+</span>
+{% endmacro %}
+
+{% macro render_article_header(article) %}
+<header class="mb-1">
+    <h3 class="mb-0">{{ article.title }}</h3>
+    <div class="d-flex flex-row-reverse">
+        <time class="text-secondary align-right" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+    </div>
+</header>
+{% endmacro %}
+
+{% macro render_article_footer(article) %}
+<footer class="d-flex flex-row-reverse">
+    {{ render_article_tags(article) }}
+</footer>
+{% endmacro %}
+
+{% macro render_summary_header(article) %}
+{{ render_article_header(article) }}
+{% endmacro %}
+
+{% macro render_summary_footer(article) %}
+<footer class="d-flex">
+    {{ render_article_tags(article) }}
+    <a class="ml-auto" href="/{{ article.url }}">Read more</a>
+</footer>
+{% endmacro %}
+
+{% macro render_summary_section(article) %}
+<article class="mb-3">
+    {{ render_summary_header(article) }}
+    {{ article.summary }}
+    {{ render_summary_footer(article) }}
+</article>
+{% endmacro %}

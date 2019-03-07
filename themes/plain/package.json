@@ -1,0 +1,32 @@
+{
+    "name": "pelican-bootstrap4",
+    "version": "0.0.1",
+    "description": "Bootstrap4 theme for Pelican",
+    "main": "webpack.config.js",
+    "dependencies": {
+        "autoprefixer": "^9.4.10",
+        "bootstrap": "^4.3.1",
+        "css-loader": "^2.1.1",
+        "jquery": "^3.3.1",
+        "mini-css-extract-plugin": "^0.5.0",
+        "popper.js": "^1.14.7",
+        "postcss-loader": "^3.0.0",
+        "precss": "^4.0.0",
+        "sass": "^1.17.2",
+        "sass-loader": "^7.1.0",
+        "style-loader": "^0.23.1",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.2.3"
+    },
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alapshin/alapshin.github.io.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/alapshin/alapshin.github.io/issues"
+    },
+    "homepage": "https://github.com/alapshin/alapshin.github.io#readme"
+}

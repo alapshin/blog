@@ -7,7 +7,6 @@ from __future__ import unicode_literals
 PATH = 'content'
 SITENAME = '/dev/alapshin'
 SITEURL = ''
-TYPOGRIFY = True
 USE_FOLDER_AS_CATEGORY = False
 
 # URL settings
@@ -41,13 +40,12 @@ DEFAULT_PAGINATION = 10
 DEFAULT_LANG = 'en'
 
 # Theme settings
-THEME = 'themes/bootstrap4'
+THEME = 'themes/plain'
 # Blogroll
 LINKS = (
     ('Blog', '/'),
     ('Archives', '/archives/'),
     ('About', '/pages/about/'),
-    ('Contact', '/pages/contact/'),
 )
 
 # Social widget

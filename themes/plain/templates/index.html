@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-{% from "macros.html" import render_article_summary %}
+{% from "macros.html" import render_summary_section %}
 
 {% block content %}
-    <div class="d-flex flex-column flex-fill">
-        <div class="flex-fill">
+    <div>
+        <div>
             {% for article in articles_page.object_list %}
-                {{ render_article_summary(article) }}
+                {{ render_summary_section(article) }}
             {% endfor %}
         </div>
         {% if articles_page.has_other_pages() %}

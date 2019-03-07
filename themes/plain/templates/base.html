@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html LANG="{{ DEFAULT_LANG }}">
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="canonical" href="/{{ output_file }}">
+        <link rel="stylesheet" type="text/css" href="/theme/pygments.css">
+        <link rel="stylesheet" type="text/css" href="/theme/dist/styles.css">
+
+        <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+        {% endblock head %}
+    </head>
+    <body class="d-flex flex-column h-100">
+        <header class="header">
+            {% include 'navigation.html' %}
+        </header>
+        <main class="container mt-3">
+            <div class="row justify-content-center">
+                <div class="col-9">
+                    {% block content %}{% endblock content %}
+                </div>
+            </div>
+        </main>
+        <footer class="footer mt-auto mb-3">
+            <div class="container text-center">
+                Source code is avialable on <a href="https://github.com/alapshin/alapshin.github.io">Github</a><br/>
+                All content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><br/>
+            </div>
+        </footer>
+        <script type=text/javascript src="/theme/dist/app.js" charset="utf-8"></script>
+
+        {% include 'analytics.html' %}
+    </body>
+</html>

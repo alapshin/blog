@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand bg-dark text-light">
+    <h1 class="navbar-brand mb-0 h1">{{ SITENAME }}</h1>
+    <ul class="navbar-nav mr-auto">
+        {% for title, link in LINKS %}
+            <li class="nav-item{% if False %} active{% endif %}">
+                <a class="nav-link text-light" href="{{ link }}">{{ title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

@@ -1,0 +1,36 @@
+$red: #dc3545;
+$blue: #007bff;
+$gray-900: #212529;
+
+$primary: $gray-900;
+$link-color: $red;
+
+$enable-rounded: false;
+
+$font-family-monospace: "Fira Mono";
+$font-family-sans-serif: "Fira Sans";
+
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,600,600i&subset=cyrillic');
+
+body {
+    min-height: 100vh;
+}
+
+// Justify text in article
+article {
+    @extend .text-justify;
+    // But don't justify text in article's headers
+    header {
+        @extend .text-left;
+    }
+    // Use correct Bootstrap styling for tables
+    table {
+        @extend .table, .table-sm;
+    }
+    // Use correct Bootstrap styling for blockquotes
+    blockquote {
+        @extend .blockquote;
+    }
+}
