@@ -11,10 +11,10 @@ module.exports = {
         path: path.resolve(__dirname, 'static/dist'),
     },
     resolve: {
-        modules: [process.env.NODE_PATH, 'node_modules'],
+        modules: [process.env.NODE_PATH || 'node_modules'],
     },
     resolveLoader: {
-        modules: [process.env.NODE_PATH, 'node_modules'],
+        modules: [process.env.NODE_PATH || 'node_modules'],
     },
     module: {
         rules: [
