@@ -13,7 +13,7 @@ from pelicanconf import *
 
 
 # Basic settings
-SITEURL = 'https://alapshin.com'
+SITEURL = 'https://www.alapshin.com'
 
 # URL settings
 RELATIVE_URLS = False
